@@ -18,6 +18,9 @@ class RegisterController extends AbstractController
     #[Route('/inscription', name: 'user_register', methods: ['GET', 'POST'])]
     public function register(Request $request, EntityManagerInterface $entityManager, UserPasswordHasherInterface $passwordHasher): Response
     {
+        if ($this->getUser()) {
+            return $this->redirectToRoute('default_home');
+        }
 
         // 1 - Instanciation
 
