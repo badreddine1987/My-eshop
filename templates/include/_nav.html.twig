@@ -21,23 +21,31 @@
 						<a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
 					</li>
 				{% endif %}
+				{# Pour vérifier le rôle d'un user, vous DEVEZ utiliser la fonction Twig is_granted() #}
+				{% if is_granted('ROLE_ADMIN') %}
+				<!--=====dropdown--admin==========-->
+
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 						Espace Admin
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li>
-							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="{{ path('show_dashboard') }}">Dashboard</a>
 						</li>
 						<li>
-							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Gestions des produits </a>
 						</li>
-						<li><hr class="dropdown-divider"></li>
 						<li>
-							<a class="dropdown-item" href="#">Something else here</a>
+							<a class="dropdown-item" href="#">Gestions des memebre </a>
 						</li>
+						<li>
+							<a class="dropdown-item" href="#">Gestions des Commandes </a>
+						</li>
+						
 					</ul>
 				</li>
+				{% endif %}
 				{# <li class="nav-item">
 								          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 								        </li> #}

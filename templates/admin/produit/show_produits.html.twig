@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block title %}gérer les produits !
+{% endblock %}
+
+{% block body %}
+
+	<h1 class="text-center my-3">Gestion des produits</h1>
+
+	{% include "include/_flashes.html.twig" %}
+
+
+	<div class="row">
+		<div class="col-6 mx-auto text-center">
+			<a href="" class="d-blcok mx-auto btn btn-primary col-4">Ajouter un produit
+            <i class="fa fa-plus-circle
+"></i>
+
+</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-11 mx-auto">
+			<table class="table table-hover my-5">
+				<thead class="table-dark">
+					<tr>
+						<th>#</th>
+						<th>Titre</th>
+						<th>Description</th>
+						<th>Couleur</th>
+						<th>Taille</th>
+						<th>Genre</th>
+						<th>Photo</th>
+						<th>Prix</th>
+						<th>Stock</th>
+						<th>Ajouté le:</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+
+
+{% endblock %}
