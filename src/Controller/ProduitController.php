@@ -3,8 +3,11 @@
 namespace App\Controller;
 
 
+use DateTime;
 use App\Entity\Produit;
+use App\Form\ProduitFormType;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -30,5 +33,29 @@ class ProduitController extends AbstractController
     # 4 - Créer le fichier Twig de cette vue.
     # 5 - Finir la partie POST dans l'action.
 
+    #[Route('/Ajouter un produit', name: 'create_produit', methods: ['GET', 'POST'])]
+    public function createProduit(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $produit = new Produit();
+
+        $form = $this->createForm(ProduitFormType::class, $produit)
+                ->handleRequest($request);
+
+                if($form->isSubmitted() && $form->isValid()){
+
+                    $produit->setCreatedAt(new DateTime());
+                    $produit->setUpdatedAt(new DateTime());
+
+                    $entityManager->persist($produit);
+                    $entityManager->flush();
+
+                    return $this->redirectToRoute('default_home');
+            }
+
+        return $this->render('admin/produit/create_produits.html.twig', [
+            'form_produit' => $form->createView(),
+            
+        ]);
+    }
 
 } // end class
