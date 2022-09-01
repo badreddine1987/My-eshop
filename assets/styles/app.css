@@ -1,0 +1,17 @@
+
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f5dd9057 !important;
+}
+
+
+.img-custom {
+    object-fit: contain;
+}

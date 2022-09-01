@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Produit;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\Image;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -44,7 +45,17 @@ class ProduitFormType extends AbstractType
             ])
             ->add('photo', FileType::class, [
                 'label' => 'Photo du produit',
-                
+                'data_class' => null,
+                'constraints' => [
+                    new Image([
+                        'mimeTypes' => ['image/jpeg', 'image/png'],
+                        'mimeTypesMessage' => 'Les formats autorisés sont : .jpg .png',
+                        'maxSize' => '3M',
+                        'maxSizeMessage' => 'Le poids maximal du fichier est : {{ limit }} {{ suffix}} => {{ name }}: {{ size }} {{ suffix}}'
+                    ]),
+                ],
+                'help' => 'Formats autorisés sont : .jpg .png'
+
             ])
             ->add('price', TextType::class, [
                 'label' => 'Prix',
@@ -53,13 +64,12 @@ class ProduitFormType extends AbstractType
                 'label' => 'Quantité',
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Ajouter produit',
+                'label' => $options['photo'] ? 'modifier produit' : 'Ajouter produit',
                 'validate' => false,
                 'attr' => [
                     'class' => 'd-block mx-auto btn btn-warning col-4'
-                    ]
-            ])
-        ;
+                ]
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
