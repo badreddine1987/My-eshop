@@ -82,6 +82,394 @@ class DefaultController extends AbstractController
 
 10/ gitdesktop
 
-    
+    => add
+    -> ADD existing repository
+
+11/ creation entity 
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Tous droits réservés.
+
+Testez le nouveau système multiplateforme PowerShell https://aka.ms/pscore6
+
+PS C:\Users\bhadj\Documents\Doranco\sf\semaine-2\My-eshop> symfony console make:controller
+
+ Choose a name for your controller class (e.g. VictoriousPizzaController):
+ > DefaultController
+
+ created: templates/default/index.html.twig
+
+ 
+  Success! 
+ 
+
+ Next: Open your new controller class and add some pages!
+PS C:\Users\bhadj\Documents\Doranco\sf\semaine-2\My-eshop> symfony console make:entity
+
+ Class name of the entity to create or update (e.g. GentleElephant):
+ > Produit
+
+ created: src/Entity/Produit.php
+ created: src/Repository/ProduitRepository.php
+ 
+ Entity generated! Now let's add some fields!
+ You can always add more fields later manually or by re-running this command.
+
+ New property name (press <return> to stop adding fields):
+ > title
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ >
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > description
+
+ Field type (enter ? to see all types) [string]:
+ > text
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > color
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ > 100
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > size
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ > 10
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > gender
+
+ Field type (enter ? to see all types) [string]:
+ >     
+
+ Field length [255]:
+ > 20
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > photo
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ >
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > price
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ > 10
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > stock
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ > 10
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > createdAt
+
+ Field type (enter ? to see all types) [datetime_immutable]:
+ > datetime
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > updatedAt
+
+ Field type (enter ? to see all types) [datetime_immutable]:
+ > datetime
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > deletedAt
+
+ Field type (enter ? to see all types) [datetime_immutable]:
+ > datetime
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > yes
+
+ updated: src/Entity/Produit.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > ^Aerror sending signal interrupt not supported by windows
+PS C:\Users\bhadj\Documents\Doranco\sf\semaine-2\My-eshop> symfony console make:entity Commande
+
+ created: src/Entity/Commande.php
+ created: src/Repository/CommandeRepository.php
+ 
+ Entity generated! Now let's add some fields!
+ You can always add more fields later manually or by re-running this command.
+
+ New property name (press <return> to stop adding fields):
+ > quantity
+
+ Field type (enter ? to see all types) [string]:
+ >    
+
+ Field length [255]:
+ > 5
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Commande.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > total
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ > 10
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Commande.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > status
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ > 25
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Commande.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > createdAt
+
+ Field type (enter ? to see all types) [datetime_immutable]:
+ > datetime
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Commande.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > updatedAt
+
+ Field type (enter ? to see all types) [datetime_immutable]:
+ > datetime
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >          
+
+ updated: src/Entity/Commande.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > deletedAt
+
+ Field type (enter ? to see all types) [datetime_immutable]:
+ > datetime
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > yes
+
+ updated: src/Entity/Commande.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ >
 
 
+ 
+  Success! 
+ 
+
+ Next: When you're ready, create a migration with php bin/console make:migration
+
+PS C:\Users\bhadj\Documents\Doranco\sf\semaine-2\My-eshop> symfony console make:user User      
+
+ Do you want to store user data in the database (via Doctrine)? (yes/no) [yes]:
+ > yes
+
+ Enter a property name that will be the unique "display" name for the user (e.g. email, username, uuid) [email]:
+ > email
+
+ Will this app need to hash/check user passwords? Choose No if passwords are not needed or will be checked/hashed by some other system (e.g. a single sign-on server).
+
+ Does this app need to hash/check user passwords? (yes/no) [yes]:
+ > yes
+
+ created: src/Entity/User.php
+ created: src/Repository/UserRepository.php
+ updated: src/Entity/User.php
+ updated: config/packages/security.yaml
+
+ 
+  Success!
+
+
+ Next Steps:
+   - Review your new App\Entity\User class.
+   - Use make:entity to add more fields to your User entity and then run make:migration.
+   - Create a way to authenticate! See https://symfony.com/doc/current/security.html
+PS C:\Users\bhadj\Documents\Doranco\sf\semaine-2\My-eshop> symfony console make:entity User
+
+
+
+
+ Your entity already exists! So let's add some new fields!
+
+ New property name (press <return> to stop adding fields):
+ > firstname
+
+ Field type (enter ? to see all types) [string]:
+ > 
+
+ Field length [255]:
+ > 100
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > 
+
+ updated: src/Entity/User.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > lastname
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ > 100
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/User.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > gender
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ > 20
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/User.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > createdAt
+
+ Field type (enter ? to see all types) [datetime_immutable]:
+ > datetime
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/User.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > updatedAt
+
+ Field type (enter ? to see all types) [datetime_immutable]:
+ > datetime
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/User.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > deletedAt
+
+ Field type (enter ? to see all types) [datetime_immutable]:
+ > datetime
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > yes
+
+ updated: src/Entity/User.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > 
+
+
+ 
+  Success! 
+ 
+
+ Next: When you're ready, create a migration with php bin/console make:migration
+
+PS C:\Users\bhadj\Documents\Doranco\sf\semaine-2\My-eshop> 
+
+
+11/ une nouvelle route pour la partie Admin
