@@ -22,3 +22,6 @@
 
 /.vscode/*
 /.idea/*
+/public/build/
+/public/uploads/
+/node_modules/
