@@ -22,7 +22,7 @@
 
 /.vscode/*
 /.idea/*
-/public/uploads/
+/public/uploads/gitr
 
 
 ###> symfony/webpack-encore-bundle ###
